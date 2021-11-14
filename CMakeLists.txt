@@ -70,62 +70,58 @@ set(CORE_SRCS
   )
 
 set(LIBRARY_SRCS
-  libraries/ArduinoOTA/src/ArduinoOTA.cpp
-  libraries/AsyncUDP/src/AsyncUDP.cpp
-  libraries/BluetoothSerial/src/BluetoothSerial.cpp
-  libraries/BluetoothSerial/src/BTAddress.cpp
-  libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp
-  libraries/BluetoothSerial/src/BTScanResultsSet.cpp
-  libraries/DNSServer/src/DNSServer.cpp
+#  libraries/AsyncUDP/src/AsyncUDP.cpp
+#  libraries/BluetoothSerial/src/BluetoothSerial.cpp
+#  libraries/BluetoothSerial/src/BTAddress.cpp
+#  libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp
+#  libraries/BluetoothSerial/src/BTScanResultsSet.cpp
+#  libraries/DNSServer/src/DNSServer.cpp
   libraries/EEPROM/src/EEPROM.cpp
-  libraries/ESPmDNS/src/ESPmDNS.cpp
-  libraries/Ethernet/src/ETH.cpp
-  libraries/FFat/src/FFat.cpp
-  libraries/FS/src/FS.cpp
-  libraries/FS/src/vfs_api.cpp
-  libraries/HTTPClient/src/HTTPClient.cpp
-  libraries/HTTPUpdate/src/HTTPUpdate.cpp
-  libraries/LittleFS/src/LittleFS.cpp
-  libraries/NetBIOS/src/NetBIOS.cpp
+#  libraries/ESPmDNS/src/ESPmDNS.cpp
+#  libraries/Ethernet/src/ETH.cpp
+#  libraries/FFat/src/FFat.cpp
+#  libraries/FS/src/FS.cpp
+#  libraries/FS/src/vfs_api.cpp
+#  libraries/HTTPClient/src/HTTPClient.cpp
+#  libraries/LittleFS/src/LittleFS.cpp
+#  libraries/NetBIOS/src/NetBIOS.cpp
   libraries/Preferences/src/Preferences.cpp
-  libraries/RainMaker/src/RMaker.cpp
-  libraries/RainMaker/src/RMakerNode.cpp
-  libraries/RainMaker/src/RMakerParam.cpp
-  libraries/RainMaker/src/RMakerDevice.cpp
-  libraries/RainMaker/src/RMakerType.cpp
-  libraries/SD_MMC/src/SD_MMC.cpp
-  libraries/SD/src/SD.cpp
-  libraries/SD/src/sd_diskio.cpp
-  libraries/SD/src/sd_diskio_crc.c
+#  libraries/RainMaker/src/RMaker.cpp
+#  libraries/RainMaker/src/RMakerNode.cpp
+#  libraries/RainMaker/src/RMakerParam.cpp
+#  libraries/RainMaker/src/RMakerDevice.cpp
+#  libraries/RainMaker/src/RMakerType.cpp
+#  libraries/SD_MMC/src/SD_MMC.cpp
+#  libraries/SD/src/SD.cpp
+#  libraries/SD/src/sd_diskio.cpp
+#  libraries/SD/src/sd_diskio_crc.c
   libraries/SimpleBLE/src/SimpleBLE.cpp
-  libraries/SPIFFS/src/SPIFFS.cpp
-  libraries/SPI/src/SPI.cpp
-  libraries/Ticker/src/Ticker.cpp
-  libraries/Update/src/Updater.cpp
-  libraries/Update/src/HttpsOTAUpdate.cpp
-  libraries/USB/src/USBHID.cpp
-  libraries/USB/src/USBHIDMouse.cpp
-  libraries/USB/src/USBHIDKeyboard.cpp
-  libraries/USB/src/USBHIDGamepad.cpp
-  libraries/USB/src/USBHIDConsumerControl.cpp
-  libraries/USB/src/USBHIDSystemControl.cpp
-  libraries/USB/src/USBHIDVendor.cpp
-  libraries/USB/src/USBVendor.cpp
-  libraries/WebServer/src/WebServer.cpp
-  libraries/WebServer/src/Parsing.cpp
-  libraries/WebServer/src/detail/mimetable.cpp
-  libraries/WiFiClientSecure/src/ssl_client.cpp
-  libraries/WiFiClientSecure/src/WiFiClientSecure.cpp
-  libraries/WiFi/src/WiFiAP.cpp
-  libraries/WiFi/src/WiFiClient.cpp
-  libraries/WiFi/src/WiFi.cpp
-  libraries/WiFi/src/WiFiGeneric.cpp
-  libraries/WiFi/src/WiFiMulti.cpp
-  libraries/WiFi/src/WiFiScan.cpp
-  libraries/WiFi/src/WiFiServer.cpp
-  libraries/WiFi/src/WiFiSTA.cpp
-  libraries/WiFi/src/WiFiUdp.cpp
-  libraries/WiFiProv/src/WiFiProv.cpp
+#  libraries/SPIFFS/src/SPIFFS.cpp
+#  libraries/SPI/src/SPI.cpp
+#  libraries/Ticker/src/Ticker.cpp
+#  libraries/USB/src/USBHID.cpp
+#  libraries/USB/src/USBHIDMouse.cpp
+#  libraries/USB/src/USBHIDKeyboard.cpp
+#  libraries/USB/src/USBHIDGamepad.cpp
+#  libraries/USB/src/USBHIDConsumerControl.cpp
+#  libraries/USB/src/USBHIDSystemControl.cpp
+#  libraries/USB/src/USBHIDVendor.cpp
+#  libraries/USB/src/USBVendor.cpp
+#  libraries/WebServer/src/WebServer.cpp
+#  libraries/WebServer/src/Parsing.cpp
+#  libraries/WebServer/src/detail/mimetable.cpp
+#  libraries/WiFiClientSecure/src/ssl_client.cpp
+#  libraries/WiFiClientSecure/src/WiFiClientSecure.cpp
+#  libraries/WiFi/src/WiFiAP.cpp
+#  libraries/WiFi/src/WiFiClient.cpp
+#  libraries/WiFi/src/WiFi.cpp
+#  libraries/WiFi/src/WiFiGeneric.cpp
+#  libraries/WiFi/src/WiFiMulti.cpp
+#  libraries/WiFi/src/WiFiScan.cpp
+#  libraries/WiFi/src/WiFiServer.cpp
+#  libraries/WiFi/src/WiFiSTA.cpp
+#  libraries/WiFi/src/WiFiUdp.cpp
+#  libraries/WiFiProv/src/WiFiProv.cpp
   libraries/Wire/src/Wire.cpp
   )
 
@@ -165,7 +161,6 @@ set(BLE_SRCS
 set(includedirs
   variants/${IDF_TARGET}/
   cores/esp32/
-  libraries/ArduinoOTA/src
   libraries/AsyncUDP/src
   libraries/BLE/src
   libraries/BluetoothSerial/src
@@ -176,7 +171,6 @@ set(includedirs
   libraries/FFat/src
   libraries/FS/src
   libraries/HTTPClient/src
-  libraries/HTTPUpdate/src
   libraries/LittleFS/src
   libraries/NetBIOS/src
   libraries/Preferences/src
@@ -187,7 +181,6 @@ set(includedirs
   libraries/SPIFFS/src
   libraries/SPI/src
   libraries/Ticker/src
-  libraries/Update/src
   libraries/USB/src
   libraries/WebServer/src
   libraries/WiFiClientSecure/src
